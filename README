@@ -57,7 +57,51 @@ YOU CAN USE MY ICS DEVICE FOLDER
 
 CODE:
 
-git clone 
+git clone git://github.com/cipsgokhle/ICS-ANDROID-PECAN-FOLDER.git
+
+Now navigate into the folder:
+
+cd pecan
+
+Connect phone to computer and make sure USB debugging is enabled and you have adb set up.
+
+./extract-files.sh
+
+now it will get all Device Proprietary Files that needed 
+
+Navigate back to your home directory for building: 
+
+NOW WE START TO BUILD ICS:
+
+CODE:
+
+source build/envsetup.sh
+
+IF YOU GET PROBLEM TRY THIS
+
+. build/envsetup.sh
+
+Get your list of devices: 
+
+CODE:
+
+lunch
+
+Pick your poison.
+
+Now compile: 
+
+make -j1
+
+IF YOU GET PROBLEM TRY THIS 
+
+make -j1 otapackage
+
+NOW ICS WAS STARTED TO BUILD WAIT FOR SOME TIME UNTILL YOU WILL NOT GET 'Package complete'  MSG
+
+NOW ICS IS READY COPY TO YOUR PHONE SDCARD AND FLASH IT
+
+ENJOY ICS ON P350
 
  
-
+ 
